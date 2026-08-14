@@ -1,0 +1,66 @@
+Fully local AI assistant stack running on Fedora KDE
+AMD GPU accelerated inference using the Radeon RX 9070 XT 16 GB
+Ollama running natively on the host for direct GPU access
+OpenWebUI in Docker with persistent data storage
+SearXNG preconfigured as the local web search backend
+Automatic Docker to Ollama networking through host.docker.internal
+Connectivity checks for OpenWebUI to Ollama and OpenWebUI to SearXNG
+Friendly model profiles instead of long Hugging Face model names
+Natural Fast 27B as the default 32K assistant
+Research Plus 27B with 64K context
+Deep Research 27B with 128K context
+Background Scout 270M for lightweight OpenWebUI background tasks
+Dedicated task model for titles, tags, retrieval queries, and search queries
+Reduced UI latency by preventing background jobs from blocking the main 27B model
+Flash Attention enabled
+q8 KV cache for improved VRAM efficiency
+Single parallel inference request to avoid unnecessary VRAM pressure
+Persistent model residency with OLLAMA_KEEP_ALIVE=-1
+100 percent GPU residency target for the default 32K model
+Automatic model profile creation and refresh
+Existing model layer reuse to avoid downloading the same 13 GB model repeatedly
+Evidence first troubleshooting behavior
+Requests logs, screenshots, configuration, versions, or command output before guessing
+Copy and paste ready diagnostic commands
+Persistent long term memory
+Selective memory retrieval instead of injecting the entire memory database into every prompt
+Full Memory System Context disabled
+Background memory review disabled to avoid hidden large model jobs
+Persistent document memory workflow
+Uploaded documents can be remembered across future chats
+Full documents stored in Knowledge
+Compact document references stored in Memory
+Topic and keyword based document recall
+Relevant excerpts retrieved only when needed
+Unrelated documents kept out of the active context
+Global Response Discipline Guard
+Protection against repeated final answers
+Protection against internal review text leaking into responses
+Automatic handling of obvious typos
+Thinking disabled for normal assistant profiles
+Optional deeper reasoning for the Deep Research profile
+Mild repetition penalty to reduce generation loops without breaking code output
+Global SearXNG web search
+JSON SearXNG API enabled automatically
+Configurable search result count and concurrency
+Local search traffic between OpenWebUI and SearXNG over Docker networking
+No commercial search API required
+Persistent OpenWebUI chats
+Persistent users
+Persistent Knowledge
+Persistent Memory
+Persistent Functions
+Existing OpenWebUI installations preserved
+Existing SearXNG installations preserved when healthy
+Fresh machine deployment support
+Existing machine upgrade and repair support
+Private per run temporary workspace
+Safe execution as either root or a normal sudo user
+No dependency on shared /tmp cache permissions
+Built in Bash syntax validation
+OpenWebUI model allowlist support
+Clean model picker with only the intended assistant profiles
+Source models can remain installed without cluttering the UI
+Designed for Citrix, FSLogix, Windows, Linux, PowerShell, networking, coding, and technical research
+Runs without requiring cloud AI for normal operation
+Still technically a gaming PC, at least according to the purchase justification
