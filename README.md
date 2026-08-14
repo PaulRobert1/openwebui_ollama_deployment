@@ -1,3 +1,17 @@
+TO INSTALL AND CONFIGURE RUN FOLLOWING IN TERMINAL:
+________________________________________________________________________________
+FILE="$(find /home/robert/Downloads -maxdepth 1 -type f \
+  -name 'deploy-local-ai-suite-v4.1*.sh' \
+  -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2-)"
+
+echo "Using: $FILE"
+
+chmod +x "$FILE"
+"$FILE"
+_________________________________________________________________________________
+
+
+
 
 # Local AI Assistant Deployment
 
