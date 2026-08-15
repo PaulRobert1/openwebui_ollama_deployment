@@ -1,11 +1,15 @@
 TO INSTALL AND CONFIGURE RUN FOLLOWING IN TERMINAL:
 ________________________________________________________________________________
 FILE="$(find /home/robert/Downloads -maxdepth 1 -type f \
-  -name 'deploy-local-ai-suite-v4.1*.sh' \
+  -name 'deploy-local-ai-suite-v5.8*.sh' \
   -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2-)"
 
-echo "Using: $FILE"
+if [ -z "$FILE" ]; then
+    echo "ERROR: v5.8 installer not found"
+    exit 1
+fi
 
+echo "Using: $FILE"
 chmod +x "$FILE"
 "$FILE"
 _________________________________________________________________________________
