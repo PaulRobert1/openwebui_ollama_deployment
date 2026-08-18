@@ -1,8 +1,11 @@
 TO INSTALL AND CONFIGURE RUN FOLLOWING IN TERMINAL:
 ________________________________________________________________________________
 cd ~/Downloads
+
 chmod +x deploy-local-ai-suite-v8.8.sh
+
 ./deploy-local-ai-suite-v8.8.sh
+
 _________________________________________________________________________________
 
 
